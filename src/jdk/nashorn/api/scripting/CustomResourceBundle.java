@@ -16,7 +16,6 @@ public class CustomResourceBundle {
 
     private void loadProperties(String baseName) {
         String resPath = baseName.replace(".", "/");
-        System.out.println("resPath:"+resPath);
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(resPath + ".properties")) {
             if (inputStream != null) {
                 properties.load(inputStream);
