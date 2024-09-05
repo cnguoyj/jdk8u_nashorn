@@ -30,9 +30,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import jdk.internal.org.objectweb.asm.ClassReader;
-import jdk.internal.org.objectweb.asm.ClassWriter;
-import jdk.internal.org.objectweb.asm.util.CheckClassAdapter;
+import jdk.nashorn.internal.asm.ClassReader;
+import jdk.nashorn.internal.asm.ClassWriter;
+import jdk.nashorn.internal.asm.util.CheckClassAdapter;
 
 /**
  * Main class for the "nasgen" tool.

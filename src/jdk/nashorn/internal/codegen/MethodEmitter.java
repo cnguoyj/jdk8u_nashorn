@@ -25,38 +25,38 @@
 
 package jdk.nashorn.internal.codegen;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.ATHROW;
-import static jdk.internal.org.objectweb.asm.Opcodes.CHECKCAST;
-import static jdk.internal.org.objectweb.asm.Opcodes.DUP2;
-import static jdk.internal.org.objectweb.asm.Opcodes.GETFIELD;
-import static jdk.internal.org.objectweb.asm.Opcodes.GETSTATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.GOTO;
-import static jdk.internal.org.objectweb.asm.Opcodes.H_INVOKESTATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFEQ;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFGE;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFGT;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFLE;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFLT;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFNE;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFNONNULL;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFNULL;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ACMPEQ;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ACMPNE;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ICMPEQ;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ICMPGE;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ICMPGT;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ICMPLE;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ICMPLT;
-import static jdk.internal.org.objectweb.asm.Opcodes.IF_ICMPNE;
-import static jdk.internal.org.objectweb.asm.Opcodes.INSTANCEOF;
-import static jdk.internal.org.objectweb.asm.Opcodes.INVOKEINTERFACE;
-import static jdk.internal.org.objectweb.asm.Opcodes.INVOKESPECIAL;
-import static jdk.internal.org.objectweb.asm.Opcodes.INVOKESTATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.INVOKEVIRTUAL;
-import static jdk.internal.org.objectweb.asm.Opcodes.NEW;
-import static jdk.internal.org.objectweb.asm.Opcodes.PUTFIELD;
-import static jdk.internal.org.objectweb.asm.Opcodes.PUTSTATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.RETURN;
+import static jdk.nashorn.internal.asm.Opcodes.ATHROW;
+import static jdk.nashorn.internal.asm.Opcodes.CHECKCAST;
+import static jdk.nashorn.internal.asm.Opcodes.DUP2;
+import static jdk.nashorn.internal.asm.Opcodes.GETFIELD;
+import static jdk.nashorn.internal.asm.Opcodes.GETSTATIC;
+import static jdk.nashorn.internal.asm.Opcodes.GOTO;
+import static jdk.nashorn.internal.asm.Opcodes.H_INVOKESTATIC;
+import static jdk.nashorn.internal.asm.Opcodes.IFEQ;
+import static jdk.nashorn.internal.asm.Opcodes.IFGE;
+import static jdk.nashorn.internal.asm.Opcodes.IFGT;
+import static jdk.nashorn.internal.asm.Opcodes.IFLE;
+import static jdk.nashorn.internal.asm.Opcodes.IFLT;
+import static jdk.nashorn.internal.asm.Opcodes.IFNE;
+import static jdk.nashorn.internal.asm.Opcodes.IFNONNULL;
+import static jdk.nashorn.internal.asm.Opcodes.IFNULL;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ACMPEQ;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ACMPNE;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ICMPEQ;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ICMPGE;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ICMPGT;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ICMPLE;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ICMPLT;
+import static jdk.nashorn.internal.asm.Opcodes.IF_ICMPNE;
+import static jdk.nashorn.internal.asm.Opcodes.INSTANCEOF;
+import static jdk.nashorn.internal.asm.Opcodes.INVOKEINTERFACE;
+import static jdk.nashorn.internal.asm.Opcodes.INVOKESPECIAL;
+import static jdk.nashorn.internal.asm.Opcodes.INVOKESTATIC;
+import static jdk.nashorn.internal.asm.Opcodes.INVOKEVIRTUAL;
+import static jdk.nashorn.internal.asm.Opcodes.NEW;
+import static jdk.nashorn.internal.asm.Opcodes.PUTFIELD;
+import static jdk.nashorn.internal.asm.Opcodes.PUTSTATIC;
+import static jdk.nashorn.internal.asm.Opcodes.RETURN;
 import static jdk.nashorn.internal.codegen.CompilerConstants.ARGUMENTS;
 import static jdk.nashorn.internal.codegen.CompilerConstants.CONSTANTS;
 import static jdk.nashorn.internal.codegen.CompilerConstants.SCOPE;
@@ -80,8 +80,8 @@ import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
 import jdk.internal.dynalink.support.NameCodec;
-import jdk.internal.org.objectweb.asm.Handle;
-import jdk.internal.org.objectweb.asm.MethodVisitor;
+import jdk.nashorn.internal.asm.Handle;
+import jdk.nashorn.internal.asm.MethodVisitor;
 import jdk.nashorn.internal.codegen.ClassEmitter.Flag;
 import jdk.nashorn.internal.codegen.CompilerConstants.Call;
 import jdk.nashorn.internal.codegen.CompilerConstants.FieldAccess;
@@ -806,7 +806,7 @@ public class MethodEmitter {
      */
     MethodEmitter loadType(final String className) {
         debug("load type", className);
-        method.visitLdcInsn(jdk.internal.org.objectweb.asm.Type.getObjectType(className));
+        method.visitLdcInsn(jdk.nashorn.internal.asm.Type.getObjectType(className));
         pushType(Type.OBJECT);
         return this;
     }
@@ -1111,11 +1111,11 @@ public class MethodEmitter {
      */
     private static class LocalVariableDef {
         // The start label from where this definition lives.
-        private final jdk.internal.org.objectweb.asm.Label label;
+        private final jdk.nashorn.internal.asm.Label label;
         // The currently live type of the local variable.
         private final Type type;
 
-        LocalVariableDef(final jdk.internal.org.objectweb.asm.Label label, final Type type) {
+        LocalVariableDef(final jdk.nashorn.internal.asm.Label label, final Type type) {
             this.label = label;
             this.type = type;
         }
@@ -1142,7 +1142,7 @@ public class MethodEmitter {
         stack.markDeadLocalVariables(firstSlot, slotCount);
     }
 
-    private void endLocalValueDef(final Symbol symbol, final LocalVariableDef def, final jdk.internal.org.objectweb.asm.Label label) {
+    private void endLocalValueDef(final Symbol symbol, final LocalVariableDef def, final jdk.nashorn.internal.asm.Label label) {
         String name = symbol.getName();
         if (name.equals(THIS.symbolName())) {
             name = THIS_DEBUGGER.symbolName();
@@ -1171,7 +1171,7 @@ public class MethodEmitter {
             final boolean isLiveType = symbol.hasSlotFor(type);
             final LocalVariableDef existingDef = localVariableDefs.get(symbol);
             if(existingDef == null || existingDef.type != type) {
-                final jdk.internal.org.objectweb.asm.Label here = new jdk.internal.org.objectweb.asm.Label();
+                final jdk.nashorn.internal.asm.Label here = new jdk.nashorn.internal.asm.Label();
                 if(isLiveType) {
                     final LocalVariableDef newDef = new LocalVariableDef(here, type);
                     localVariableDefs.put(symbol, newDef);
@@ -1532,8 +1532,8 @@ public class MethodEmitter {
         return invoke(INVOKEINTERFACE, className, methodName, methodDescriptor, true);
     }
 
-    static jdk.internal.org.objectweb.asm.Label[] getLabels(final Label... table) {
-        final jdk.internal.org.objectweb.asm.Label[] internalLabels = new jdk.internal.org.objectweb.asm.Label[table.length];
+    static jdk.nashorn.internal.asm.Label[] getLabels(final Label... table) {
+        final jdk.nashorn.internal.asm.Label[] internalLabels = new jdk.nashorn.internal.asm.Label[table.length];
         for (int i = 0; i < table.length; i++) {
             internalLabels[i] = table[i].getLabel();
         }
@@ -2471,7 +2471,7 @@ public class MethodEmitter {
     void lineNumber(final int line) {
         if (context.getEnv()._debug_lines) {
             debug_label("[LINE]", line);
-            final jdk.internal.org.objectweb.asm.Label l = new jdk.internal.org.objectweb.asm.Label();
+            final jdk.nashorn.internal.asm.Label l = new jdk.nashorn.internal.asm.Label();
             method.visitLabel(l);
             method.visitLineNumber(line, l);
         }

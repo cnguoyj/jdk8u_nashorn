@@ -31,6 +31,7 @@ import java.util.ResourceBundle;
 import jdk.nashorn.internal.codegen.CompilerConstants;
 import jdk.nashorn.internal.objects.Global;
 import jdk.nashorn.internal.scripts.JS;
+import jdk.nashorn.api.scripting.CustomResourceBundle;
 
 /**
  * Helper class to throw various standard "ECMA error" exceptions such as Error, ReferenceError, TypeError etc.
@@ -38,10 +39,13 @@ import jdk.nashorn.internal.scripts.JS;
 public final class ECMAErrors {
     private static final String MESSAGES_RESOURCE = "jdk.nashorn.internal.runtime.resources.Messages";
 
-    private static final ResourceBundle MESSAGES_BUNDLE;
+    //private static final ResourceBundle MESSAGES_BUNDLE;
+    /* 
     static {
-        MESSAGES_BUNDLE = ResourceBundle.getBundle(MESSAGES_RESOURCE, Locale.getDefault());
+   //     MESSAGES_BUNDLE = ResourceBundle.getBundle(MESSAGES_RESOURCE, Locale.getDefault());
     }
+        */
+    private static final CustomResourceBundle MESSAGES_BUNDLE = new CustomResourceBundle(MESSAGES_RESOURCE);
 
     /** We assume that compiler generates script classes into the known package. */
     private static final String scriptPackage;

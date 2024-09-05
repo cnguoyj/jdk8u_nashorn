@@ -27,8 +27,12 @@ package jdk.nashorn.api.scripting;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Locale;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
+
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineFactory;
 import jdk.nashorn.internal.runtime.Context;

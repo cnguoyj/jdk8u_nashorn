@@ -28,8 +28,8 @@ import static jdk.nashorn.internal.tools.nasgen.StringConstants.OBJECT_ARRAY_DES
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.OBJECT_DESC;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.SCRIPTOBJECT_DESC;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.STRING_DESC;
-import jdk.internal.org.objectweb.asm.Opcodes;
-import jdk.internal.org.objectweb.asm.Type;
+import jdk.nashorn.internal.asm.Opcodes;
+import jdk.nashorn.internal.asm.Type;
 import jdk.nashorn.internal.objects.annotations.Where;
 import jdk.nashorn.internal.runtime.ScriptObject;
 

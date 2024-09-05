@@ -99,10 +99,13 @@ public final class NashornScriptEngine extends AbstractScriptEngine implements C
     // Nashorn script engine error message management
     private static final String MESSAGES_RESOURCE = "jdk.nashorn.api.scripting.resources.Messages";
 
-    private static final ResourceBundle MESSAGES_BUNDLE;
+    //private static final ResourceBundle MESSAGES_BUNDLE;
+    /* 
     static {
-        MESSAGES_BUNDLE = ResourceBundle.getBundle(MESSAGES_RESOURCE, Locale.getDefault());
+    //    MESSAGES_BUNDLE = ResourceBundle.getBundle(MESSAGES_RESOURCE, Locale.getDefault());
     }
+        */
+    private  static final CustomResourceBundle MESSAGES_BUNDLE = new CustomResourceBundle(MESSAGES_RESOURCE);
 
     // helper to get Nashorn script engine error message
     private static String getMessage(final String msgId, final String... args) {

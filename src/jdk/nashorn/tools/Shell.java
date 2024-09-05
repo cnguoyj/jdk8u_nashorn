@@ -63,6 +63,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 import static jdk.nashorn.internal.runtime.Source.sourceFor;
+import jdk.nashorn.api.scripting.CustomResourceBundle;
 
 /**
  * Command line Shell for processing JavaScript files.
@@ -76,7 +77,8 @@ public class Shell {
     /**
      * Shell message bundle.
      */
-    private static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGE_RESOURCE, Locale.getDefault());
+    //private static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGE_RESOURCE, Locale.getDefault());
+    private static final CustomResourceBundle bundle = new CustomResourceBundle(MESSAGE_RESOURCE);
 
     /**
      * Exit code for command line tool - successful

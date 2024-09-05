@@ -25,13 +25,13 @@
 
 package jdk.nashorn.internal.tools.nasgen;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.ALOAD;
-import static jdk.internal.org.objectweb.asm.Opcodes.DUP;
-import static jdk.internal.org.objectweb.asm.Opcodes.INVOKESPECIAL;
-import static jdk.internal.org.objectweb.asm.Opcodes.INVOKESTATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.NEW;
-import static jdk.internal.org.objectweb.asm.Opcodes.PUTFIELD;
-import static jdk.internal.org.objectweb.asm.Opcodes.RETURN;
+import static jdk.nashorn.internal.asm.Opcodes.ALOAD;
+import static jdk.nashorn.internal.asm.Opcodes.DUP;
+import static jdk.nashorn.internal.asm.Opcodes.INVOKESPECIAL;
+import static jdk.nashorn.internal.asm.Opcodes.INVOKESTATIC;
+import static jdk.nashorn.internal.asm.Opcodes.NEW;
+import static jdk.nashorn.internal.asm.Opcodes.PUTFIELD;
+import static jdk.nashorn.internal.asm.Opcodes.RETURN;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.$CLINIT$;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.CLINIT;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.DEFAULT_INIT_DESC;
@@ -42,15 +42,15 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import jdk.internal.org.objectweb.asm.AnnotationVisitor;
-import jdk.internal.org.objectweb.asm.Attribute;
-import jdk.internal.org.objectweb.asm.ClassReader;
-import jdk.internal.org.objectweb.asm.ClassVisitor;
-import jdk.internal.org.objectweb.asm.ClassWriter;
-import jdk.internal.org.objectweb.asm.FieldVisitor;
-import jdk.internal.org.objectweb.asm.MethodVisitor;
-import jdk.internal.org.objectweb.asm.Opcodes;
-import jdk.internal.org.objectweb.asm.util.CheckClassAdapter;
+import jdk.nashorn.internal.asm.AnnotationVisitor;
+import jdk.nashorn.internal.asm.Attribute;
+import jdk.nashorn.internal.asm.ClassReader;
+import jdk.nashorn.internal.asm.ClassVisitor;
+import jdk.nashorn.internal.asm.ClassWriter;
+import jdk.nashorn.internal.asm.FieldVisitor;
+import jdk.nashorn.internal.asm.MethodVisitor;
+import jdk.nashorn.internal.asm.Opcodes;
+import jdk.nashorn.internal.asm.util.CheckClassAdapter;
 import jdk.nashorn.internal.objects.annotations.Where;
 import jdk.nashorn.internal.tools.nasgen.MemberInfo.Kind;
 

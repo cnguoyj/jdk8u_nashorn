@@ -25,11 +25,11 @@
 
 package jdk.nashorn.internal.tools.nasgen;
 
-import jdk.internal.org.objectweb.asm.AnnotationVisitor;
-import jdk.internal.org.objectweb.asm.ClassVisitor;
-import jdk.internal.org.objectweb.asm.FieldVisitor;
-import jdk.internal.org.objectweb.asm.MethodVisitor;
-import jdk.internal.org.objectweb.asm.Opcodes;
+import jdk.nashorn.internal.asm.AnnotationVisitor;
+import jdk.nashorn.internal.asm.ClassVisitor;
+import jdk.nashorn.internal.asm.FieldVisitor;
+import jdk.nashorn.internal.asm.MethodVisitor;
+import jdk.nashorn.internal.asm.Opcodes;
 
 /**
  * A visitor that does nothing on visitXXX calls.

@@ -25,7 +25,7 @@
 
 package jdk.nashorn.internal.codegen.types;
 
-import jdk.internal.org.objectweb.asm.MethodVisitor;
+import jdk.nashorn.internal.asm.MethodVisitor;
 
 /**
  * Numeric operations, not supported by all types

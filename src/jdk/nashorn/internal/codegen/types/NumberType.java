@@ -25,23 +25,23 @@
 
 package jdk.nashorn.internal.codegen.types;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.DADD;
-import static jdk.internal.org.objectweb.asm.Opcodes.DCMPG;
-import static jdk.internal.org.objectweb.asm.Opcodes.DCMPL;
-import static jdk.internal.org.objectweb.asm.Opcodes.DCONST_0;
-import static jdk.internal.org.objectweb.asm.Opcodes.DCONST_1;
-import static jdk.internal.org.objectweb.asm.Opcodes.DDIV;
-import static jdk.internal.org.objectweb.asm.Opcodes.DLOAD;
-import static jdk.internal.org.objectweb.asm.Opcodes.DMUL;
-import static jdk.internal.org.objectweb.asm.Opcodes.DNEG;
-import static jdk.internal.org.objectweb.asm.Opcodes.DREM;
-import static jdk.internal.org.objectweb.asm.Opcodes.DRETURN;
-import static jdk.internal.org.objectweb.asm.Opcodes.DSTORE;
-import static jdk.internal.org.objectweb.asm.Opcodes.DSUB;
+import static jdk.nashorn.internal.asm.Opcodes.DADD;
+import static jdk.nashorn.internal.asm.Opcodes.DCMPG;
+import static jdk.nashorn.internal.asm.Opcodes.DCMPL;
+import static jdk.nashorn.internal.asm.Opcodes.DCONST_0;
+import static jdk.nashorn.internal.asm.Opcodes.DCONST_1;
+import static jdk.nashorn.internal.asm.Opcodes.DDIV;
+import static jdk.nashorn.internal.asm.Opcodes.DLOAD;
+import static jdk.nashorn.internal.asm.Opcodes.DMUL;
+import static jdk.nashorn.internal.asm.Opcodes.DNEG;
+import static jdk.nashorn.internal.asm.Opcodes.DREM;
+import static jdk.nashorn.internal.asm.Opcodes.DRETURN;
+import static jdk.nashorn.internal.asm.Opcodes.DSTORE;
+import static jdk.nashorn.internal.asm.Opcodes.DSUB;
 import static jdk.nashorn.internal.codegen.CompilerConstants.staticCallNoLookup;
 import static jdk.nashorn.internal.runtime.JSType.UNDEFINED_DOUBLE;
 
-import jdk.internal.org.objectweb.asm.MethodVisitor;
+import jdk.nashorn.internal.asm.MethodVisitor;
 import jdk.nashorn.internal.codegen.CompilerConstants;
 import jdk.nashorn.internal.runtime.JSType;
 

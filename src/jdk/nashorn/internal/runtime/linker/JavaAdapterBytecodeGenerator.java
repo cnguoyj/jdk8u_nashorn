@@ -25,21 +25,21 @@
 
 package jdk.nashorn.internal.runtime.linker;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_FINAL;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_PRIVATE;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_PUBLIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_STATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_SUPER;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_VARARGS;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACONST_NULL;
-import static jdk.internal.org.objectweb.asm.Opcodes.ALOAD;
-import static jdk.internal.org.objectweb.asm.Opcodes.ASTORE;
-import static jdk.internal.org.objectweb.asm.Opcodes.DUP;
-import static jdk.internal.org.objectweb.asm.Opcodes.IFNONNULL;
-import static jdk.internal.org.objectweb.asm.Opcodes.ILOAD;
-import static jdk.internal.org.objectweb.asm.Opcodes.ISTORE;
-import static jdk.internal.org.objectweb.asm.Opcodes.POP;
-import static jdk.internal.org.objectweb.asm.Opcodes.RETURN;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_FINAL;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_PRIVATE;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_PUBLIC;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_STATIC;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_SUPER;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_VARARGS;
+import static jdk.nashorn.internal.asm.Opcodes.ACONST_NULL;
+import static jdk.nashorn.internal.asm.Opcodes.ALOAD;
+import static jdk.nashorn.internal.asm.Opcodes.ASTORE;
+import static jdk.nashorn.internal.asm.Opcodes.DUP;
+import static jdk.nashorn.internal.asm.Opcodes.IFNONNULL;
+import static jdk.nashorn.internal.asm.Opcodes.ILOAD;
+import static jdk.nashorn.internal.asm.Opcodes.ISTORE;
+import static jdk.nashorn.internal.asm.Opcodes.POP;
+import static jdk.nashorn.internal.asm.Opcodes.RETURN;
 import static jdk.nashorn.internal.lookup.Lookup.MH;
 import static jdk.nashorn.internal.runtime.linker.AdaptationResult.Outcome.ERROR_NO_ACCESSIBLE_CONSTRUCTOR;
 
@@ -60,19 +60,19 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jdk.internal.org.objectweb.asm.ClassWriter;
-import jdk.internal.org.objectweb.asm.Handle;
-import jdk.internal.org.objectweb.asm.Label;
-import jdk.internal.org.objectweb.asm.Opcodes;
-import jdk.internal.org.objectweb.asm.Type;
-import jdk.internal.org.objectweb.asm.commons.InstructionAdapter;
+import jdk.nashorn.internal.asm.ClassWriter;
+import jdk.nashorn.internal.asm.Handle;
+import jdk.nashorn.internal.asm.Label;
+import jdk.nashorn.internal.asm.Opcodes;
+import jdk.nashorn.internal.asm.Type;
+import jdk.nashorn.internal.asm.commons.InstructionAdapter;
 import jdk.nashorn.api.scripting.ScriptUtils;
 import jdk.nashorn.internal.runtime.Context;
 import jdk.nashorn.internal.runtime.JSType;
 import jdk.nashorn.internal.runtime.ScriptFunction;
 import jdk.nashorn.internal.runtime.ScriptObject;
 import jdk.nashorn.internal.runtime.linker.AdaptationResult.Outcome;
-import sun.reflect.CallerSensitive;
+import jdk.internal.dynalink.beans.CallerSensitive;
 
 /**
  * Generates bytecode for a Java adapter class. Used by the {@link JavaAdapterFactory}.

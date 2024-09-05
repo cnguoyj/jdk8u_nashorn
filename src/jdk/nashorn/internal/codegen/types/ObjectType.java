@@ -25,18 +25,18 @@
 
 package jdk.nashorn.internal.codegen.types;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.ACONST_NULL;
-import static jdk.internal.org.objectweb.asm.Opcodes.ALOAD;
-import static jdk.internal.org.objectweb.asm.Opcodes.ARETURN;
-import static jdk.internal.org.objectweb.asm.Opcodes.ASTORE;
-import static jdk.internal.org.objectweb.asm.Opcodes.CHECKCAST;
-import static jdk.internal.org.objectweb.asm.Opcodes.GETSTATIC;
+import static jdk.nashorn.internal.asm.Opcodes.ACONST_NULL;
+import static jdk.nashorn.internal.asm.Opcodes.ALOAD;
+import static jdk.nashorn.internal.asm.Opcodes.ARETURN;
+import static jdk.nashorn.internal.asm.Opcodes.ASTORE;
+import static jdk.nashorn.internal.asm.Opcodes.CHECKCAST;
+import static jdk.nashorn.internal.asm.Opcodes.GETSTATIC;
 import static jdk.nashorn.internal.codegen.CompilerConstants.className;
 import static jdk.nashorn.internal.codegen.CompilerConstants.typeDescriptor;
 
 import java.lang.invoke.MethodHandle;
-import jdk.internal.org.objectweb.asm.Handle;
-import jdk.internal.org.objectweb.asm.MethodVisitor;
+import jdk.nashorn.internal.asm.Handle;
+import jdk.nashorn.internal.asm.MethodVisitor;
 import jdk.nashorn.internal.codegen.CompilerConstants;
 import jdk.nashorn.internal.runtime.JSType;
 import jdk.nashorn.internal.runtime.ScriptRuntime;

@@ -85,7 +85,7 @@ package jdk.internal.dynalink.beans;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AccessibleObject;
-import sun.reflect.CallerSensitive;
+import jdk.internal.dynalink.beans.CallerSensitive;
 
 /**
  * Utility class that determines if a method or constructor is caller sensitive. It actually encapsulates two different

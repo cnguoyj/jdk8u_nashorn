@@ -46,8 +46,8 @@ var System = Java.type("java.lang.System");
 var PrintWriter = Java.type("java.io.PrintWriter");
 
 // WARNING: uses non-API classes of jdk8!
-var ClassReader = Java.type("jdk.internal.org.objectweb.asm.ClassReader");
-var TraceClassVisitor = Java.type("jdk.internal.org.objectweb.asm.util.TraceClassVisitor");
+var ClassReader = Java.type("jdk.nashorn.internal.asm.ClassReader");
+var TraceClassVisitor = Java.type("jdk.nashorn.internal.asm.util.TraceClassVisitor");
 
 // convert file name to Path instance
 function path(file) {

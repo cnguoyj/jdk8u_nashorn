@@ -27,6 +27,7 @@ package jdk.nashorn.internal.runtime;
 
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+import jdk.nashorn.api.scripting.CustomResourceBundle;
 
 /**
  * Class to handle version strings for Nashorn.
@@ -53,12 +54,15 @@ public final class Version {
     }
 
     private static final String   VERSION_RB_NAME = "jdk.nashorn.internal.runtime.resources.version";
-    private static ResourceBundle versionRB;
+    //private static ResourceBundle versionRB;
+    private static ResourceBundle versionRB0;
+    private static CustomResourceBundle versionRB;
 
     private static String version(final String key) {
         if (versionRB == null) {
             try {
-                versionRB = ResourceBundle.getBundle(VERSION_RB_NAME);
+                //versionRB = ResourceBundle.getBundle(VERSION_RB_NAME);
+                versionRB = new CustomResourceBundle("version");
             } catch (final MissingResourceException e) {
                 return "version not available";
             }

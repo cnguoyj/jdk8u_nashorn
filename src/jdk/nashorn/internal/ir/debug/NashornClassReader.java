@@ -29,10 +29,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import jdk.internal.org.objectweb.asm.Attribute;
-import jdk.internal.org.objectweb.asm.ClassReader;
-import jdk.internal.org.objectweb.asm.ClassVisitor;
-import jdk.internal.org.objectweb.asm.Label;
+import jdk.nashorn.internal.asm.Attribute;
+import jdk.nashorn.internal.asm.ClassReader;
+import jdk.nashorn.internal.asm.ClassVisitor;
+import jdk.nashorn.internal.asm.Label;
 import jdk.nashorn.internal.ir.debug.NashornTextifier.NashornLabel;
 
 /**

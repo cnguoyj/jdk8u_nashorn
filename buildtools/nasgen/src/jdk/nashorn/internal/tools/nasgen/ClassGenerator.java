@@ -25,12 +25,12 @@
 
 package jdk.nashorn.internal.tools.nasgen;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_FINAL;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_PRIVATE;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_PUBLIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.ACC_STATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.H_INVOKESTATIC;
-import static jdk.internal.org.objectweb.asm.Opcodes.H_INVOKEVIRTUAL;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_FINAL;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_PRIVATE;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_PUBLIC;
+import static jdk.nashorn.internal.asm.Opcodes.ACC_STATIC;
+import static jdk.nashorn.internal.asm.Opcodes.H_INVOKESTATIC;
+import static jdk.nashorn.internal.asm.Opcodes.H_INVOKEVIRTUAL;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.ACCESSORPROPERTY_CREATE;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.ACCESSORPROPERTY_CREATE_DESC;
 import static jdk.nashorn.internal.tools.nasgen.StringConstants.ACCESSORPROPERTY_TYPE;
@@ -67,13 +67,13 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
-import jdk.internal.org.objectweb.asm.ClassReader;
-import jdk.internal.org.objectweb.asm.ClassVisitor;
-import jdk.internal.org.objectweb.asm.ClassWriter;
-import jdk.internal.org.objectweb.asm.FieldVisitor;
-import jdk.internal.org.objectweb.asm.Handle;
-import jdk.internal.org.objectweb.asm.MethodVisitor;
-import jdk.internal.org.objectweb.asm.Type;
+import jdk.nashorn.internal.asm.ClassReader;
+import jdk.nashorn.internal.asm.ClassVisitor;
+import jdk.nashorn.internal.asm.ClassWriter;
+import jdk.nashorn.internal.asm.FieldVisitor;
+import jdk.nashorn.internal.asm.Handle;
+import jdk.nashorn.internal.asm.MethodVisitor;
+import jdk.nashorn.internal.asm.Type;
 import jdk.nashorn.internal.tools.nasgen.MemberInfo.Kind;
 
 /**

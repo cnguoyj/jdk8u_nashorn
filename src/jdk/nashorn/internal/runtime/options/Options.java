@@ -25,6 +25,7 @@
 
 package jdk.nashorn.internal.runtime.options;
 
+import jdk.nashorn.api.scripting.CustomResourceBundle;
 import java.io.PrintWriter;
 import java.security.AccessControlContext;
 import java.security.AccessController;
@@ -590,7 +591,8 @@ public final class Options {
     /**
      * Resource bundle for properties file
      */
-    private static ResourceBundle bundle;
+    //private static ResourceBundle bundle;
+    private static CustomResourceBundle bundle;
 
     /**
      * Usages per resource from properties file
@@ -618,7 +620,8 @@ public final class Options {
     private static String definePropPrefix;
 
     static {
-        Options.bundle = ResourceBundle.getBundle(Options.MESSAGES_RESOURCE, Locale.getDefault());
+        //Options.bundle = ResourceBundle.getBundle(Options.MESSAGES_RESOURCE, Locale.getDefault());
+        Options.bundle = new CustomResourceBundle(Options.MESSAGES_RESOURCE);
         Options.validOptions = new TreeSet<>();
         Options.usage        = new HashMap<>();
 
